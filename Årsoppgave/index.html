@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Insert Player Form</title>
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <a href="index.html">Players</a>
+            <a href="stats.html">Stats</a>
+            <a href="#">Read</a>
+        </nav>
+    </header>
+    <br>
+
+    <div class="container">
+        <h1>Player Stats</h1>
+        <form id="statsForm">
+
+            <label title="Points" for="points">PTS:</label>
+            <input class="input" type="number" id="points" required>
+
+            <label title="Assists" for="assists">AST:</label>
+            <input type="number" id="assists" required>
+
+            <label title="Rebounds" for="rebounds">REB:</label>
+            <input class="input" type="number" id="rebounds" required>
+
+            <label title="Steals" for="steals">STL:</label>
+            <input class="input" type="number" id="steals" required>
+
+            <label title="Blocks" for="blocks">BLK:</label>
+            <input class="input" type="number" id="blocks" required>
+
+            <button type="button" onclick="addStats()">Add Stats</button>
+        </form>
+    </div>
+
+
+    <div class="container">
+        <h1>Average Player Stats</h1>
+        <div id="averageStats">
+            <p id="avgPoints">Average Points: 0.00</p>
+            <p id="avgAssists">Average Assists: 0.00</p>
+            <p id="avgRebounds">Average Rebounds: 0.00</p>
+            <p id="avgSteals">Average Steals: 0.00</p>
+            <p id="avgBlocks">Average Blocks: 0.00</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

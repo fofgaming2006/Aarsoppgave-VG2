@@ -1,0 +1,41 @@
+<!-- Same code as your first HTML file -->
+
+<script src="script.js"></script>
+<script>
+  function addPlayer() {
+    const firstName = document.getElementById('firstName').value;
+    const lastName = document.getElementById('lastName').value;
+    const jerseyNumber = document.getElementById('jerseyNumber').value;
+    const country = document.getElementById('country').value;
+    const height = document.getElementById('height').value;
+    const weight = document.getElementById('weight').value;
+    const year = document.getElementById('year').value;
+    const fatigue = document.getElementById('fatigue').value;
+
+    const playerData = {
+      firstName,
+      lastName,
+      jerseyNumber,
+      country,
+      height,
+      weight,
+      year,
+      fatigue,
+    };
+
+    fetch('http://localhost:3000/addPlayer', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(playerData),
+    })
+      .then((response) => response.text())
+      .then((message) => {
+        alert(message);
+      })
+      .catch((error) => {
+        console.error('Error adding player:', error);
+      });
+  }
+</script>
