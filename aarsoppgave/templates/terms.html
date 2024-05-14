@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>Terms and Conditions - AJForecast</title>
+</head>
+
+<body class="body-terms">
+
+    <header class="header">
+        <nav class="navbar">
+            <a href="/app">Home</a>
+            <a href="/admin">Admin</a>
+            <a href="/FAQ">FAQ</a>
+        </nav>
+        <div class="logout-button-div">
+            <form action="{{url_for('logout')}}" method="post">
+                <button class="logout-button" name="logout" type="submit">Logout</button>
+            </form>
+        </div>
+    </header>
+
+    <main>
+
+        <h2 class="h2-terms">Terms & Conditions</h2><br>
+
+        <section class="section-terms">
+            <h2>1. Accuracy of Information</h2>
+            <p>While we strive to provide accurate and up-to-date weather forecasts, we cannot guarantee the absolute
+                accuracy of the information provided. Weather conditions are subject to change, and AJForecast should be
+                used as a general guide only.</p><br>
+        </section>
+        <section>
+            <h2>2. Personal Use Only</h2>
+            <p>The information provided by AJForecast is intended for personal use only. Any commercial or unauthorized
+                use of the service is strictly prohibited.</p><br>
+        </section>
+        <section>
+            <h2>3. Responsibility</h2>
+            <p>Users are responsible for how they use the weather information provided by AJForecast. We are not liable
+                for any damages or losses incurred as a result of using our service.</p><br>
+        </section>
+        <section>
+            <h2>4. Privacy</h2>
+            <p>We respect your privacy and are committed to protecting your personal information. Please refer to our
+                Privacy Policy for details on how we collect, use, and disclose your data.</p><br>
+        </section>
+        <section>
+            <h2>5. Intellectual Property</h2>
+            <p>All content and materials provided by AJForecast, including but not limited to text, images, logos, and
+                trademarks, are the property of AJForecast and are protected by copyright and other intellectual
+                property laws.</p><br>
+        </section>
+        <section>
+            <h2>6. Changes to Terms</h2>
+            <p>We reserve the right to update or modify these terms and conditions at any time without prior notice. It
+                is your responsibility to review these terms periodically for changes.</p><br>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>About AJForecast</h3>
+                <p>This weather app provides you with accurate weather updates for cities worldwide. Search for a
+                    city
+                    and get instant weather information!<br> <br>
+                </p>
+                <h3>Most Searched Places: </h3>
+                <p>
+                    New York <br> London <br> Athen <br> Málaga
+                </p>
+            </div>
+            <div class="footer-section">
+                <h3>Links</h3>
+                <ul>
+                    <li><a href="/about">About Us</a></li>
+                    <li><a href="/terms">Terms & Conditions</a></li>
+                </ul> <br>
+                <div class="footer-section">
+                    <h3>Contact Us</h3>
+                    <p><strong>Email:</strong> <a href="mailto:ansoa024@osloskolen.no">ansoa024@osloskolen.no</a>
+                    </p>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>Follow Us</h3>
+                <ul class="social-icons">
+                    <li><a href="https://www.facebook.com/?locale=nb_NO"><i class="fab fa-facebook"></i></a></li>
+                    <li><a href="https://twitter.com/?lang=nb"><i class="fab fa-twitter"></i></a></li>
+                    <li><a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>

@@ -1,0 +1,511 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+input {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    outline: 0;
+    background-color: #eee;
+    border: none;
+    margin: 3px;
+    padding: 10px 20px;
+    font-size: 13px;
+    border-radius: 8px;
+    width: 75%;
+    outline: none;
+}
+
+.login-btn {
+    background-color: #512da8;
+    color: #fff;
+    font-size: 12px;
+    padding: 10px;
+    border: 1px solid transparent;
+    border-radius: 8px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    margin-top: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.login-btn:hover {
+    background-color: #673ab7;
+    border-color: #512da8;
+    transform: scale(1.05);
+}
+
+.signup-btn {
+    background-color: #512da8;
+    color: #fff;
+    font-size: 12px;
+    padding: 10px;
+    border: 1px solid transparent;
+    border-radius: 8px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    margin-top: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.signup-btn:hover {
+    background-color: #673ab7;
+    border-color: #512da8;
+    transform: scale(1.05);
+}
+
+.logout-button {
+    justify-content: center;
+    background-color: #512da8;
+    color: whitesmoke;
+    font-size: 15px;
+    border: 5px solid transparent;
+    border-radius: 5px;
+    margin: 3px;
+    padding: 10px 20px;
+    font-weight: 550;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.logout-button:hover {
+    background-color: #673ab7;
+    border-color: #512da8;
+    transform: scale(1.05);
+}
+
+.logout-button-div {
+    display: flex;
+    align-items: center;
+}
+
+.container {
+    background-color: #ffffffd6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 10px 50px;
+    height: 125%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+
+.app-body {
+    background-color: #f0f2f5;
+}
+
+.form-body {
+    background-color: #c9d6ff;
+    background: linear-gradient(to right, #e2e2e2, #c9d6ff);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 85vh;
+}
+
+.additional-info {
+    background-color: #f0f0f0;
+    /* Light gray background */
+    border-radius: 10px;
+    /* Rounded corners */
+    padding: 20px;
+    /* Padding around content */
+    margin-top: 20px;
+    /* Space between weather information and additional info */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.additional-info h3 {
+    color: #333;
+    /* Dark gray for headings */
+    margin-bottom: 10px;
+    /* Space below heading */
+}
+
+.additional-info p {
+    color: #666;
+    /* Slightly lighter gray for paragraphs */
+    line-height: 1.5;
+    /* Increased line height for readability */
+}
+
+.header {
+    position: static;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 2rem 100px;
+    background: linear-gradient(to left, #e2e2e2, #c9d6ff);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: -1;
+    /* Keep the z-index of the header */
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+}
+
+.navbar a {
+    margin-right: 20px;
+    /* Add some spacing between the links */
+    color: white;
+    /* Add color for better visibility */
+    text-decoration: none;
+}
+
+.navbar a {
+    position: relative;
+    font-size: 20px;
+    color: #fff;
+    font-weight: 500;
+    text-decoration: none;
+    margin-left: 40px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.navbar a::before {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #fff;
+    transition: .3s;
+}
+
+.navbar a:hover::before {
+    width: 100%;
+}
+
+.welcome-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.welcome-title {
+    color: #512da8;
+    font-size: 35px;
+}
+
+.card-box {
+    background: linear-gradient(to left, #e2e2e2, #c9d6ff);
+    height: 90vh;
+}
+
+.card {
+    width: 90%;
+    height: 90vh;
+    max-width: 500px;
+    color: #fff;
+    margin: 100px auto 0;
+    border-radius: 20px;
+    padding: 40px 35px;
+    text-align: center;
+}
+
+.search {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.search input {
+    border: 0;
+    outline: 0;
+    background: #ffffff;
+    color: #333;
+    padding: 10px 25px;
+    height: 60px;
+    border-radius: 30px;
+    flex: 1;
+    margin-right: 16px;
+    font-size: 16px;
+}
+
+.search button {
+    border: 0;
+    outline: 0;
+    background: #512da8;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+    color: white;
+    transition: all 0.3s ease; /* Add transition for smooth hover effect */
+}
+
+.search button:hover {
+    background-color: #673ab7; /* Change background color on hover */
+    transform: scale(1.05); /* Scale button on hover */
+}
+
+.fa-magnifying-glass {
+    font-size: 20px;
+}
+
+.header button img {
+    width: 16px;
+}
+
+.fa-cloud {
+    font-size: 150px;
+    margin-top: 30px;
+}
+
+.fa-wind {
+    font-size: 30px;
+}
+
+.fa-droplet {
+    font-size: 30px;
+}
+
+.weather h1 {
+    font-size: 80px;
+    font-weight: 500;
+}
+
+.weather h2 {
+    font-size: 45px;
+    font-weight: 400;
+    margin-top: -10px;
+}
+
+.details {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    margin-top: 50px;
+}
+
+.col {
+    display: flex;
+    align-items: center;
+    text-align: left;
+}
+
+.humidity,
+.wind {
+    font-size: 20px;
+    padding-left: 15px;
+}
+
+.faq-section {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.faq-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.faq-question {
+    width: 45%;
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.faq-question h3 {
+    margin-bottom: 10px;
+    color: #512da8;
+}
+
+.faq-question p {
+    font-size: 16px;
+    line-height: 1.5;
+    color: #555;
+}
+
+footer {
+    background-color: #333;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    color: #fff;
+    padding: 50px 0;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.footer-section {
+    width: 30%;
+    text-align: left;
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-section h3 {
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+.footer-section p {
+    font-size: 14px;
+    line-height: 2;
+}
+
+.footer-section ul {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 10px;
+}
+
+.footer-section ul li {
+    margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.social-icons {
+    display: flex;
+    align-items: center;
+    margin-top: auto;
+}
+
+.social-icons li {
+    margin-right: 15px;
+}
+
+.social-icons li:last-child {
+    margin-right: 0;
+}
+
+.social-icons a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+/* Apply styles only to content and aboutus-section */
+.content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+    /* Adjust height as needed */
+}
+
+.aboutus-section {
+    width: 70%;
+    /* Adjust width as needed */
+    padding: 20px;
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.aboutus-section h1 {
+    margin-bottom: 20px;
+    color: #512da8;
+}
+
+.aboutus-section p {
+    color: #666;
+}
+
+.body-terms {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f2f5; /* Light background color */
+}
+
+main {
+    background-color: #ffffff; /* White background color for the main content */
+    max-width: 800px; /* Set maximum width to control content width */
+    margin: 20px auto; /* Center the content horizontally with some margin */
+    padding: 20px; /* Add padding around the content */
+    border-radius: 10px; /* Rounded corners for the main content box */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Add shadow for depth */
+}
+
+.h2-terms {
+    color: #512da8; /* Purple color for section headings */
+    margin-bottom: 10px; /* Add space below section headings */
+}
+
+.section {
+    margin-bottom: 20px; /* Add space between sections */
+}
+
+.p {
+    color: #666; /* Dark gray color for paragraph text */
+    line-height: 1.5; /* Set line height for better readability */
+}
+
+
+/* Style for the contact section */
+.contact-section {
+    background-color: #f9f9f9;
+    /* Light gray background */
+    padding: 20px;
+    /* Padding around content */
+    border-radius: 10px;
+    /* Rounded corners */
+    margin-top: 20px;
+    /* Space from top */
+}
+
+/* Style for the contact section heading */
+.contact-section h2 {
+    color: #333;
+    /* Dark gray for headings */
+    margin-bottom: 10px;
+    /* Space below heading */
+}
+
+/* Style for the contact information */
+.contact-info {
+    font-size: 16px;
+    /* Font size for contact information */
+}
+
+/* Style for individual contact details */
+.contact-info p {
+    margin: 10px 0;
+    /* Vertical margin between contact details */
+}
+
+/* Style for labels */
+.contact-info strong {
+    font-weight: bold;
+    /* Bold text for labels */
+}
+
+/* Style for email link */
+.contact-info a {
+    color: #007bff;
+    /* Blue color for email link */
+    text-decoration: none;
+    /* Remove underline from email link */
+}

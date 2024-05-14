@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+    <script src="https://kit.fontawesome.com/ced2e054c6.js" crossorigin="anonymous"></script>
+    <title>FAQ - AJForecast</title>
+</head>
+
+<body>
+
+    <header class="header">
+        <nav class="navbar">
+            <a href="/app">Hjem</a>
+            <a href="/admin">Admin</a>
+            <a href="/FAQ">FAQ</a>
+        </nav>
+        <div class="logout-button-div">
+            <form action="{{url_for('logout')}}" method="post">
+                <button class="logout-button" name="logout" type="submit">Logg ut</button>
+            </form>
+        </div>
+    </header>
+
+    <div class="faq-section">
+        <h2>Frequently Asked Questions (FAQ)</h2> <br><br>
+        <div class="faq-content">
+            <div class="faq-question">
+                <h3>How can I check the weather for another city?</h3>
+                <p>You can easily check the weather for another city by entering the city name and country in the search
+                    field and clicking the search button.</p>
+            </div>
+            <div class="faq-question">
+                <h3>In which temperature unit is the weather displayed?</h3>
+                <p>The weather is displayed in Celsius (°C).</p>
+            </div>
+            <div class="faq-question">
+                <h3>Where does the app retrieve the weather data from?</h3>
+                <p>The app retrieves the weather data from the OpenWeatherMap API.</p>
+            </div>
+            <div class="faq-question">
+                <h3>How accurate is the weather information?</h3>
+                <p>The weather information is as accurate as the data we receive from the OpenWeatherMap API. However,
+                    local conditions and weather variations may affect accuracy.</p>
+            </div>
+            <div class="faq-question">
+                <h3>How is the weather information updated?</h3>
+                <p>The weather information is updated automatically when you search for a new city.</p>
+            </div>
+            <div class="faq-question">
+                <h3>How does the app store my data?</h3>
+                <p>The app does not store personal data. The weather data displayed is only retrieved from the
+                    OpenWeatherMap API to provide you with the most accurate information about weather conditions.</p>
+            </div>
+            <div class="faq-question">
+                <h3>Do any of the links at the bottom of the website work?</h3>
+                <p>Unfortunately, some links do not have access to the locations. If you click on them, you may be sent
+                    to the same place. However, the social media links will send you to the correct places anyway.</p>
+            </div>
+            <div class="faq-question">
+                <h3>Can I receive weather alerts?</h3>
+                <p>Unfortunately, the app currently does not offer a feature to send weather alerts. However, we are
+                    exploring the possibility of adding this functionality in future updates.</p>
+            </div>
+        </div>
+    </div>
+
+
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>About AJForecast</h3>
+                <p>This weather app provides you with accurate weather updates for cities worldwide. Search for a city
+                    and get instant weather information!<br> <br>
+                </p>
+                <h3>Most Searched Places: </h3>
+                <p>
+                    New York <br> London <br> Athen <br> Málaga
+                </p> 
+            </div>
+            <div class="footer-section">
+                <h3>Links</h3>
+                <ul>
+                    <li><a href="/about">About Us</a></li>
+                    <li><a href="/terms">Terms & Conditions</a></li>
+                </ul> <br>
+                <div class="footer-section">
+                    <h3>Contact Us</h3>
+                    <p><strong>Email:</strong> <a href="mailto:ansoa024@osloskolen.no">ansoa024@osloskolen.no</a></p>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>Follow Us</h3>
+                <ul class="social-icons">
+                    <li><a href="https://www.facebook.com/?locale=nb_NO"><i class="fab fa-facebook"></i></a></li>
+                    <li><a href="https://twitter.com/?lang=nb"><i class="fab fa-twitter"></i></a></li>
+                    <li><a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>Signup</title>
+</head>
+
+<body class="form-body">
+
+    <!--Form for Signup side-->
+    <form action="{{ url_for('signup') }}" method="POST">
+        <div class="container">
+            <h1 class="title">Create An Account</h1> <br>
+            <input class="name" type="username" placeholder="Name" id="username" name="username" required><br>
+            <input class="email" type="email" placeholder="Email" id="email" name="email" required><br>
+            <input class="password" type="password" placeholder="Password" id="password" name="password" required><br>
+            <input class="password" type="password" placeholder="Confirm Password" name="confirmPassword" required>
+            <link rel="stylesheet" href="">
+            <input class="signup-btn" type="submit" name="submit" value="Create"> <br>
+            <p class="form_text">
+                <a href="/login" class="form_link">Already have an account? Log in</a>
+            </p>
+        </div>
+    </form>
+</body>
+
+</html>

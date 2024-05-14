@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+    <script src="https://kit.fontawesome.com/ced2e054c6.js" crossorigin="anonymous"></script>
+    <title>AJForecast</title>
+</head>
+
+<body class="app-body">
+
+    <header class="header">
+        <nav class="navbar">
+            <a href="/app">Home</a>
+            <a href="/admin">Admin</a>
+            <a href="/FAQ">FAQ</a>
+        </nav>
+        <div class="logout-button-div">
+            <form action="{{url_for('logout')}}" method="post">
+                <button class="logout-button" name="logout" type="submit">Logout</button>
+            </form>
+        </div>
+    </header>
+
+    <br>
+    <br>
+    <br>
+
+    <div class="welcome-box">
+        <h2 class="welcome-title">Welcome!</h2>
+    </div>
+
+    <div class="additional-info">
+        <h3>Additional Information</h3>
+        <p>Welcome to AJForecast, your go-to weather app for accurate and up-to-date weather forecasts worldwide. Use
+            the search box above to find weather information for any city or country.</p>
+        <p>Stay prepared for any weather conditions with AJForecast. Don't forget to check out our FAQ section for any
+            questions you might have!</p>
+    </div>
+
+    <div class="card-box">
+        <div class="card">
+            <div class="search">
+                <input type="text" placeholder="Enter Name Of City, Country" spellcheck="false">
+                <button><i class="fa-solid fa-magnifying-glass"></i></button>
+            </div>
+            <div class="weather">
+                <i class="fa-solid fa-cloud"></i>
+                <h1 class="temp">22°C</h1>
+                <h2 class="city">Oslo</h2>
+                <div class="details">
+                    <div class="col">
+                        <i class="fa-solid fa-droplet"></i>
+                        <div>
+                            <p class="humidity">50%</p>
+                            <p class="humidity">Humidity</p>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <i class="fa-solid fa-wind"></i>
+                        <div>
+                            <p class="wind">15 km/h</p>
+                            <p class="wind">Wind Speed</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>About AJForecast</h3>
+                <p>This weather app provides you with accurate weather updates for cities worldwide. Search for a city
+                    and get instant weather information!<br> <br>
+                </p>
+                <h3>Most Searched Places: </h3>
+                <p>
+                    New York <br> London <br> Athen <br> Málaga
+                </p> 
+            </div>
+            <div class="footer-section">
+                <h3>Links</h3>
+                <ul>
+                    <li><a href="/about">About Us</a></li>
+                    <li><a href="/terms">Terms & Conditions</a></li>
+                </ul> <br>
+                <div class="footer-section">
+                    <h3>Contact Us</h3>
+                    <p><strong>Email:</strong> <a href="mailto:ansoa024@osloskolen.no">ansoa024@osloskolen.no</a></p>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>Follow Us</h3>
+                <ul class="social-icons">
+                    <li><a href="https://www.facebook.com/?locale=nb_NO"><i class="fab fa-facebook"></i></a></li>
+                    <li><a href="https://twitter.com/?lang=nb"><i class="fab fa-twitter"></i></a></li>
+                    <li><a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const apiKey = "8ad889918c7f05d86ea3cbec0143c2e7";
+        const apiUrl = "https://api.openweathermap.org/data/2.5/weather?units=metric&q=";
+
+        const searchBox = document.querySelector(" .search input");
+        const searchBtn = document.querySelector(" .search button");
+        const weatherIcon = document.querySelector("weather.icon")
+
+        async function checkWeather(city) {
+            const response = await fetch(apiUrl + city + `&appid=${apiKey}`);
+            var data = await response.json();
+
+            console.log(data);
+
+            document.querySelector(".city").innerHTML = data.name;
+            document.querySelector(".temp").innerHTML = Math.round(data.main.temp) + "°C";
+            document.querySelector(".humidity").innerHTML = data.main.humidity + "%";
+            document.querySelector(".wind").innerHTML = data.wind.speed + " km/h ";
+
+        }
+
+        searchBtn.addEventListener("click", () => {
+            checkWeather(searchBox.value);
+        })
+    </script>
+
+
+</body>
+
+</html>

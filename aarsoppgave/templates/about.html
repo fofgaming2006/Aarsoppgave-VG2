@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+    <script src="https://kit.fontawesome.com/ced2e054c6.js" crossorigin="anonymous"></script>
+    <title>Om AJForecast</title>
+</head>
+
+<body class="aboutus-body">
+    <header class="header">
+        <nav class="navbar">
+            <a href="/app">Home</a>
+            <a href="/admin">Admin</a>
+            <a href="/FAQ">FAQ</a>
+        </nav>
+        <div class="logout-button-div">
+            <form action="{{url_for('logout')}}" method="post">
+                <button class="logout-button" name="logout" type="submit">Logout</button>
+            </form>
+        </div>
+    </header>
+
+    <div class="content">
+        <div class="aboutus-section">
+            <h1>Om AJForecast</h1>
+            <p>AJForecast er din pålitelige følgesvenn for nøyaktige væroppdateringer over hele verden. Uansett hvor du
+                er, gir vår værapplikasjon deg øyeblikkelig tilgang til værforholdene i dine favorittbyer.<br><br>
+                Enten du planlegger en reise, trenger å vite om du skal ta med deg en paraply eller bare vil ha en
+                oppdatering om været rundt deg, er AJForecast her for å hjelpe. Vår brukervennlige app lar deg søke
+                etter en hvilken som helst by og gir deg umiddelbar tilgang til oppdatert værinformasjon.<br><br>
+                Fra temperatur og luftfuktighet til vindhastighet og værforhold - AJForecast gir deg alt du trenger for
+                å være forberedt på dagen foran deg. Med vårt pålitelige værdatabase og intuitive brukergrensesnitt, er
+                det å planlegge dagen din enklere enn noensinne.<br><br>
+                Vi er stolte av å tilby tjenester av høy kvalitet, slik at du kan stole på oss for dine
+                væroppdateringsbehov. Utforsk våre funksjoner i dag og la AJForecast bli din foretrukne værpartner!</p>
+        </div>
+    </div>
+
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>About AJForecast</h3>
+                <p>This weather app provides you with accurate weather updates for cities worldwide. Search for a city
+                    and get instant weather information!<br> <br>
+                </p>
+                <h3>Most Searched Places: </h3>
+                <p>
+                    New York <br> London <br> Athen <br> Málaga
+                </p> 
+            </div>
+            <div class="footer-section">
+                <h3>Links</h3>
+                <ul>
+                    <li><a href="/about">About Us</a></li>
+                    <li><a href="/terms">Terms & Conditions</a></li>
+                </ul> <br>
+                <div class="footer-section">
+                    <h3>Contact Us</h3>
+                    <p><strong>Email:</strong> <a href="mailto:ansoa024@osloskolen.no">ansoa024@osloskolen.no</a></p>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>Follow Us</h3>
+                <ul class="social-icons">
+                    <li><a href="https://www.facebook.com/?locale=nb_NO"><i class="fab fa-facebook"></i></a></li>
+                    <li><a href="https://twitter.com/?lang=nb"><i class="fab fa-twitter"></i></a></li>
+                    <li><a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+
+</body>
+
+</html>

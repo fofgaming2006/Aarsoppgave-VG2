@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+    <title>Admin - AJForecast</title>
+</head>
+
+<body>
+
+    <header class="header">
+        <nav class="navbar">
+            <a href="/app">Home</a>
+            <a href="/admin">Admin</a>
+            <a href="/FAQ">FAQ</a>
+        </nav>
+        <div class="logout-button-div">
+            <form action="{{url_for('logout')}}" method="post">
+                <button class="logout-button" name="logout" type="submit">Logout</button>
+            </form>
+        </div>
+    </header>
+
+
+    <div class="">
+        <h1>Admin</h1>
+    </div>
+
+    <h1>User Management</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Username</th>
+                <th>Password</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for user in users %}
+            <tr>
+                <td>{{ user.UserID }}</td>
+                <td>{{ user.Username }}</td>
+                <td>{{ user.Password }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>About AJForecast</h3>
+                <p>This weather app provides you with accurate weather updates for cities worldwide. Search for a city
+                    and get instant weather information!<br> <br>
+                </p>
+                <h3>Most Searched Places: </h3>
+                <p>
+                    New York <br> London <br> Athen <br> Málaga
+                </p>
+            </div>
+            <div class="footer-section">
+                <h3>Links</h3>
+                <ul>
+                    <li><a href="/about">About Us</a></li>
+                    <li><a href="/terms">Terms & Conditions</a></li>
+                </ul> <br>
+                <div class="footer-section">
+                    <h3>Contact Us</h3>
+                    <p><strong>Email:</strong> <a href="mailto:ansoa024@osloskolen.no">ansoa024@osloskolen.no</a></p>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>Follow Us</h3>
+                <ul class="social-icons">
+                    <li><a href="https://www.facebook.com/?locale=nb_NO"><i class="fab fa-facebook"></i></a></li>
+                    <li><a href="https://twitter.com/?lang=nb"><i class="fab fa-twitter"></i></a></li>
+                    <li><a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>
