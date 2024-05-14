@@ -10,8 +10,7 @@ FAQ-seksjon for å svare på vanlige spørsmål.
 Adminpanel for administrasjon av brukerkontoer. 
 Dokumentasjon For detaljert dokumentasjon om hvordan du setter opp og kjører AJForecast-nettstedet lokalt, se mappen dokumentasjon i dette repositoriet. 
 Komme i gang For å komme i gang med AJForecast, følg disse trinnene: 
-Klone dette repositoriet til din lokale maskin. Installer de nødvendige avhengighetene. 
+Klone dette repositoriet til din lokale maskin. Installer kun de nødvendige. 
 Sett opp databasen i henhold til den medfølgende skjemaet. 
-Kjør Flask-applikasjonen lokalt.  
-Hvis du ønsker å bidra til AJForecast-prosjektet, vennligst følg retningslinjene som er beskrevet i CONTRIBUTING.md-filen. 
+Kjør Flask-applikasjonen lokalt.   
 Kontakt For spørsmål eller tilbakemeldinger, ta kontakt på ansoa024@osloskolen.no.
