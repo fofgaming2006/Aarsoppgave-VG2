@@ -12,6 +12,6 @@ Dokumentasjon For detaljert dokumentasjon om hvordan du setter opp og kjører AJ
 Komme i gang For å komme i gang med AJForecast, følg disse trinnene: 
 Klone dette repositoriet til din lokale maskin. Installer de nødvendige avhengighetene. 
 Sett opp databasen i henhold til den medfølgende skjemaet. 
-Kjør Flask-applikasjonen lokalt. Bidrag Bidrag er velkomne! 
+Kjør Flask-applikasjonen lokalt.  
 Hvis du ønsker å bidra til AJForecast-prosjektet, vennligst følg retningslinjene som er beskrevet i CONTRIBUTING.md-filen. 
 Kontakt For spørsmål eller tilbakemeldinger, ta kontakt på ansoa024@osloskolen.no.
