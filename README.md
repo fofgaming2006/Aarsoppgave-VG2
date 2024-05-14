@@ -1,4 +1,3 @@
-AJForecast Nettsted 
 Velkommen til AJForecast, din værapp for nøyaktige og oppdaterte værvarsler over hele verden.
 Denne mappen inneholder all kildekoden og dokumentasjonen for AJForecast-nettstedet. 
 Om AJForecast gir brukerne nøyaktige væroppdateringer for byer over hele verden. 
