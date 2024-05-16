@@ -5,7 +5,7 @@ CREATE DATABASE IF NOT EXISTS weatherapp;
 USE weatherapp;
  
 -- Drop the Users table if it already exists to avoid conflicts
-DROP TABLE IF EXISTS Users;
+DROP TABLE IF EXISTS users;
  
 -- Create the Users table with the specified fields and constraints
 CREATE TABLE Users (
